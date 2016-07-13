@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
+$config['base_url'] = 'http://localhost/ci/ci_gallery/';
 
 /*
 |--------------------------------------------------------------------------
@@ -511,3 +511,6 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+
+// Admin password
+$config['hash'] = '$2y$10$ou88m.lqCR0xgL8QaFZA..ON.LUHQforJyBv8kGhM78o55jiFqi/C';

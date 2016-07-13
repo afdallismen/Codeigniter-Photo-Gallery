@@ -1,3 +1,15 @@
-<p>Show all image here in table</p>
-<p>Bascily all info</p>
-<p>And view, edit, delete action</p>
+<main class="clearfix">
+  <?php
+    if ($msg) {
+      echo
+        '<div class="alert alert-info">
+          <strong>Info!</strong> '.$msg.'
+        </div>';
+    }
+  ?>
+
+  <?= $table_photo ?>
+
+  <?= $pagination ?>
+
+</main>
