@@ -36,10 +36,9 @@ class Admin extends CI_Controller
     }
 
     public function index()
-    {
+    {   
         if ( ! $this->session->userdata('logged_in')) {
             $this->page_items['msg'] = "Login to see this page.";
-
             $this->render('index', $this->page_items);
         } else {
 
@@ -85,7 +84,6 @@ class Admin extends CI_Controller
             redirect('admin');
         } else {
             $this->form_validation->set_rules('password', 'Password', 'trim|required');
-
             if ($this->form_validation->run() == false) {
                 $this->page_items['msg'] = validation_errors('<span> ','<span>');
 
@@ -93,14 +91,13 @@ class Admin extends CI_Controller
             } else {
                 $pass = $this->input->post('password');
                 $hash = $this->config->item('hash');
-
+                
                 if ( ! password_verify($pass, $hash)) {
                     $this->page_items['msg'] = "Wrong password.";
 
                     $this->render('index', $this->page_items);
                 } else {
                     $this->session->set_userdata('logged_in', true);
-
                     redirect('admin');
                 }
             }
@@ -270,8 +267,8 @@ class Admin extends CI_Controller
         $config['source_image'] = $source;
         $config['create_thumb'] = $thumb;
         $config['maintain_ratio'] = TRUE;
-        $config['width']         = $w;
-        $config['height']       = $h;
+        $config['width'] = $w;
+        $config['height'] = $h;
         $this->image_lib->initialize($config);
 
         $this->image_lib->resize();

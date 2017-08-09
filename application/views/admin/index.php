@@ -11,5 +11,4 @@
   <?= $table_photo ?>
 
   <?= $pagination ?>
-
 </main>

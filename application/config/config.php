@@ -513,4 +513,5 @@ $config['rewrite_short_tags'] = FALSE;
 $config['proxy_ips'] = '';
 
 // Admin password
-$config['hash'] = '$2y$10$ou88m.lqCR0xgL8QaFZA..ON.LUHQforJyBv8kGhM78o55jiFqi/C';
+// $config['hash'] = '$2y$10$ou88m.lqCR0xgL8QaFZA..ON.LUHQforJyBv8kGhM78o55jiFqi/C';
+$config['hash'] = '$2y$10$RgW3aoQfmdoRZhpvx..RbuxZTbQEZKAjYK7nkr/L9b9Ng1U3qh8fq';
